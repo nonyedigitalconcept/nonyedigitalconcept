@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonye Digital Concept - Premium VTU & Data Reselling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1D4ED8', // blue-700
+                        secondary: '#F59E0B', // amber-500
+                        dark: '#1E293B', // slate-800
+                        light: '#F8FAFC', // slate-50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles for smooth transitions and hiding elements */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        /* Mobile menu slide */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-lg">
+                        NDC
+                    </div>
+                    <span class="font-bold text-xl md:text-2xl text-dark tracking-tight">Nonye Digital Concept</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-primary font-medium transition-colors">Services</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-primary font-medium transition-colors">Pricing</a>
+                    <a href="#about" class="text-slate-600 hover:text-primary font-medium transition-colors">About</a>
+                    <button class="text-slate-600 hover:text-primary font-medium px-4 py-2">Login</button>
+                    <button class="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Register Free
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-white shadow-2xl z-50 md:hidden flex flex-col p-6">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-bold text-xl text-primary">Menu</span>
+            <button id="close-menu-btn" class="text-slate-500 hover:text-red-500 text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a href="#home" class="py-3 border-b border-slate-100 text-slate-700 font-medium mobile-link">Home</a>
+        <a href="#services" class="py-3 border-b border-slate-100 text-slate-700 font-medium mobile-link">Services</a>
+        <a href="#pricing" class="py-3 border-b border-slate-100 text-slate-700 font-medium mobile-link">Pricing</a>
+        <a href="#about" class="py-3 border-b border-slate-100 text-slate-700 font-medium mobile-link">About</a>
+        <div class="mt-8 flex flex-col gap-3">
+            <button class="w-full border-2 border-primary text-primary py-2 rounded-lg font-medium">Login</button>
+            <button class="w-full bg-primary text-white py-2 rounded-lg font-medium shadow-md">Register Free</button>
+        </div>
+    </div>
+    
+    <!-- Overlay for mobile menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-blue-50 via-white to-amber-50 overflow-hidden relative">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-blue-200 mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-40 right-20 w-72 h-72 rounded-full bg-amber-200 mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 rounded-full bg-blue-300 mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Text -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-primary font-medium text-sm mb-6 border border-blue-200">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                        </span>
+                        Nigeria's Most Reliable VTU Platform
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight mb-6">
+                        Instant <span class="text-primary">Data</span>, Airtime & Utility Bills.
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Join thousands of Nigerians enjoying cheap data bundles, instant airtime recharge, fast cable TV subscriptions, exam pins, and electricity tokens at wholesale prices.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#services" class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                            Start Transacting <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#pricing" class="bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2">
+                            View Pricing
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 font-medium">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i> Instant Delivery
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-primary text-xl"></i> 100% Secure
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Mockup -->
+                <div class="relative hidden md:block">
+                    <!-- Dashboard Mockup -->
+                    <div class="glass-card rounded-2xl shadow-2xl p-6 relative z-10 transform rotate-1 hover:rotate-0 transition-transform duration-500 border border-white/40">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center overflow-hidden">
+                                    <i class="fas fa-user text-slate-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Welcome back,</p>
+                                    <p class="font-bold text-slate-800">Reseller Account</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-slate-500 font-medium">Wallet Balance</p>
+                                <p class="font-bold text-2xl text-primary">₦45,250.00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex flex-col items-center justify-center gap-2 hover:bg-blue-100 transition cursor-pointer">
+                                <div class="w-10 h-10 bg-blue-500 rounded-full text-white flex items-center justify-center shadow-md">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                                <span class="font-semibold text-slate-700 text-sm">Buy Data</span>
+                            </div>
+                            <div class="bg-amber-50 p-4 rounded-xl border border-amber-100 flex flex-col items-center justify-center gap-2 hover:bg-amber-100 transition cursor-pointer">
+                                <div class="w-10 h-10 bg-secondary rounded-full text-white flex items-center justify-center shadow-md">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <span class="font-semibold text-slate-700 text-sm">Airtime</span>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-xl border border-green-100 flex flex-col items-center justify-center gap-2 hover:bg-green-100 transition cursor-pointer">
+                                <div class="w-10 h-10 bg-green-500 rounded-full text-white flex items-center justify-center shadow-md">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <span class="font-semibold text-slate-700 text-sm">Electricity</span>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-xl border border-purple-100 flex flex-col items-center justify-center gap-2 hover:bg-purple-100 transition cursor-pointer">
+                                <div class="w-10 h-10 bg-purple-500 rounded-full text-white flex items-center justify-center shadow-md">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <span class="font-semibold text-slate-700 text-sm">Exam Pins</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                            <p class="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wider">Recent Transactions</p>
+                            <div class="flex justify-between items-center py-2 border-b border-slate-200">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center text-white text-xs font-bold">MTN</div>
+                                    <span class="text-sm font-medium text-slate-700">MTN SME 1GB</span>
+                                </div>
+                                <span class="text-sm font-bold text-red-500">-₦250</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white text-xs"><i class="fas fa-plus"></i></div>
+                                    <span class="text-sm font-medium text-slate-700">Wallet Funding</span>
+                                </div>
+                                <span class="text-sm font-bold text-green-500">+₦10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Services Section -->
+    <section id="services" class="py-20 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Premium Services</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                    Experience automated, instant delivery across all our digital services. Select a service below to see how it works.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 max-w-5xl mx-auto flex flex-col md:flex-row">
+                
+                <!-- Service Tabs (Sidebar on Desktop) -->
+                <div class="md:w-1/3 bg-slate-50 border-r border-slate-100 p-6 flex flex-col gap-2">
+                    <button onclick="openTab('data-tab')" id="btn-data-tab" class="tab-btn w-full text-left px-5 py-4 rounded-xl flex items-center gap-4 transition-all bg-white shadow-sm border border-primary/20 text-primary font-bold">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <div>
+                            <div class="text-base">Buy Data Bundle</div>
+                            <div class="text-xs font-normal text-slate-500">MTN, Airtel, GLO, 9Mobile</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openTab('airtime-tab')" id="btn-airtime-tab" class="tab-btn w-full text-left px-5 py-4 rounded-xl flex items-center gap-4 transition-all hover:bg-white hover:shadow-sm text-slate-600 font-medium">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center shrink-0">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <div class="text-base">Buy Airtime VTU</div>
+                            <div class="text-xs font-normal text-slate-500">Instant recharge with discount</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openTab('exam-tab')" id="btn-exam-tab" class="tab-btn w-full text-left px-5 py-4 rounded-xl flex items-center gap-4 transition-all hover:bg-white hover:shadow-sm text-slate-600 font-medium">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center shrink-0">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <div class="text-base">Exam Scratch Cards</div>
+                            <div class="text-xs font-normal text-slate-500">WAEC, NECO, NABTEB Pins</div>
+                        </div>
+                    </button>
+
+                    <button onclick="openTab('power-tab')" id="btn-power-tab" class="tab-btn w-full text-left px-5 py-4 rounded-xl flex items-center gap-4 transition-all hover:bg-white hover:shadow-sm text-slate-600 font-medium">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center shrink-0">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <div class="text-base">Power Recharge</div>
+                            <div class="text-xs font-normal text-slate-500">Prepaid Meter Tokens</div>
+                        </div>
+                    </button>
+                    
+                    <button onclick="openTab('cable-tab')" id="btn-cable-tab" class="tab-btn w-full text-left px-5 py-4 rounded-xl flex items-center gap-4 transition-all hover:bg-white hover:shadow-sm text-slate-600 font-medium">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center shrink-0">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <div>
+                            <div class="text-base">Cable TV</div>
+                            <div class="text-xs font-normal text-slate-500">DSTV, GOTV, Startimes</div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Service Content Area -->
+                <div class="md:w-2/3 p-6 md:p-10 relative">
+                    
+                    <!-- Data Tab -->
+                    <div id="data-tab" class="tab-content active">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Data Subscription</h3>
+                            <span class="bg-blue-100 text-primary text-xs font-bold px-3 py-1 rounded-full">Save up to 40%</span>
+                        </div>
+                        <form onsubmit="handleFormSubmit(event, 'Data purchase')" class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Network</label>
+                                <div class="grid grid-cols-4 gap-2">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="network" value="mtn" class="peer sr-only" checked>
+                                        <div class="text-center py-2 border-2 rounded-lg peer-checked:border-yellow-400 peer-checked:bg-yellow-50 bg-white hover:bg-slate-50 font-bold text-slate-700 transition">MTN</div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="network" value="airtel" class="peer sr-only">
+                                        <div class="text-center py-2 border-2 rounded-lg peer-checked:border-red-500 peer-checked:bg-red-50 bg-white hover:bg-slate-50 font-bold text-slate-700 transition">Airtel</div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="network" value="glo" class="peer sr-only">
+                                        <div class="text-center py-2 border-2 rounded-lg peer-checked:border-green-500 peer-checked:bg-green-50 bg-white hover:bg-slate-50 font-bold text-slate-700 transition">GLO</div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="network" value="9mobile" class="peer sr-only">
+                                        <div class="text-center py-2 border-2 rounded-lg peer-checked:border-green-800 peer-checked:bg-green-50 bg-white hover:bg-slate-50 font-bold text-slate-700 transition">9Mobile</div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Data Type</label>
+                                <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-slate-700">
+                                    <option>SME Data</option>
+                                    <option>Corporate Gifting (CG)</option>
+                                    <option>Direct Data</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                                <input type="tel" placeholder="080XXXXXXXX" class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Data Plan</label>
+                                <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-slate-700">
+                                    <option>1GB - 30 Days (₦260)</option>
+                                    <option>2GB - 30 Days (₦520)</option>
+                                    <option>5GB - 30 Days (₦1,300)</option>
+                                    <option>10GB - 30 Days (₦2,600)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition-colors flex justify-center items-center gap-2">
+                                Proceed to Pay ₦260 <i class="fas fa-lock text-sm"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Airtime Tab -->
+                    <div id="airtime-tab" class="tab-content">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Airtime Top-Up</h3>
+                            <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">2% - 3% Discount</span>
+                        </div>
+                        <form onsubmit="handleFormSubmit(event, 'Airtime recharge')" class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Network</label>
+                                <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary bg-white">
+                                    <option>MTN</option>
+                                    <option>Airtel</option>
+                                    <option>GLO</option>
+                                    <option>9Mobile</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+                                <input type="tel" placeholder="080XXXXXXXX" class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary" required>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Amount (₦)</label>
+                                <input type="number" min="50" max="50000" placeholder="E.g., 500" class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary" required>
+                                <p class="text-xs text-green-600 mt-1 font-medium">You will pay: ₦490 (2% discount)</p>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition-colors mt-4">
+                                Buy Airtime Now
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Exam Tab -->
+                    <div id="exam-tab" class="tab-content">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Exam Result Pins</h3>
+                            <span class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full">Instant Generation</span>
+                        </div>
+                        <form onsubmit="handleFormSubmit(event, 'Exam Pin purchase')" class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Exam Type</label>
+                                <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary bg-white">
+                                    <option>WAEC Result Checker</option>
+                                    <option>NECO Result Token</option>
+                                    <option>NABTEB Scratch Card</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Quantity</label>
+                                <input type="number" min="1" max="100" value="1" class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary" required>
+                            </div>
+
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-slate-600">Unit Price</span>
+                                    <span class="font-bold text-slate-800">₦3,500</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-2 border-t border-slate-200">
+                                    <span class="text-sm font-bold text-slate-800">Total Amount</span>
+                                    <span class="font-bold text-xl text-primary">₦3,500</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition-colors">
+                                Generate Pin Instantly
+                            </button>
+                            <p class="text-xs text-center text-slate-500">Pin will be displayed on screen and sent to your registered email.</p>
+                        </form>
+                    </div>
+
+                    <!-- Power Tab -->
+                    <div id="power-tab" class="tab-content">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Electricity Token</h3>
+                            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full">All DisCos</span>
+                        </div>
+                        <form onsubmit="handleFormSubmit(event, 'Electricity payment')" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Distribution Company (DisCo)</label>
+                                <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary bg-white">
+                                    <option>Abuja (AEDC)</option>
+                                    <option>Ikeja (IKEDC)</option>
+                                    <option>Eko (EKEDC)</option>
+                                    <option>Port Harcourt (PHED)</option>
+                                    <option>Enugu (EEDC)</option>
+                                    <option>Ibadan (IBEDC)</option>
+                                    <option>Kano (KEDCO)</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Meter Type</label>
+                                    <select class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary bg-white">
+                                        <option>Prepaid</option>
+                                        <option>Postpaid</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Amount (₦)</label>
+                                    <input type="number" min="1000" placeholder="E.g. 5000" class="w-full border border-slate-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-primary" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1">Meter Number</label>
+                                <div class="flex">
+                                    <input type="text" placeholder="Enter meter number" class="w-full border border-slate-300 rounded-l-lg p-3 outline-none focus:ring-2 focus:ring-primary" required>
+                                    <button type="button" onclick="verifyMeter()" class="bg-slate-800 hover:bg-slate-900 text-white px-4 rounded-r-lg font-medium transition-colors whitespace-nowrap">
+                                        Verify
+                                    </button>
+                                </div>
+                                <p id="meter-name" class="text-xs text-green-600 mt-1 font-medium hidden"><i class="fas fa-check-circle"></i> Customer: JOHN DOE</p>
+                            </div>
+
+                            <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition-colors mt-4">
+                                Purchase Token
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Cable TV Tab -->
+                    <div id="cable-tab" class="tab-content">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-2xl font-bold text-dark">Cable TV Subs</h3>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">Instant Activation</span>
+                        </div>
+                        <div class="text-center py-10">
+                            <i class="fas fa-tv text-5xl text-slate-300 mb-4"></i>
+                            <p class="text-slate-600">Please register or log in to access DSTV, GOTV, and Startimes subscriptions.</p>
+                            <button class="mt-4 bg-primary text-white px-6 py-2 rounded-lg font-medium shadow-md hover:bg-blue-800 transition">Login to Dashboard</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <p class="text-center text-sm text-slate-500 mt-6"><i class="fas fa-info-circle"></i> The forms above are for demonstration. Real transactions occur in our secure dashboard.</p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Features -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Why Choose Nonye Digital Concept?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                    We provide the infrastructure for both personal users and smart entrepreneurs running data reselling businesses.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Instant Delivery</h3>
+                    <p class="text-slate-600">Our systems are fully automated. Transactions are processed and delivered in under 10 seconds.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Cheapest Rates</h3>
+                    <p class="text-slate-600">We offer highly discounted wholesale prices, giving you enough margin to resell and make massive profit.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Secure Wallet</h3>
+                    <p class="text-slate-600">Fund your wallet easily via bank transfer or card. Your funds are 100% secure with our encrypted system.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">24/7 Support</h3>
+                    <p class="text-slate-600">Our customer service team is always on standby to resolve any issues quickly and efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Pricing Preview -->
+    <section id="pricing" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNHYtNGgtMnY0aC00djJoNHY0aDJ2LTRoNHYtMmgtNHptMC0zMFYwaC0ydjRoLTR2Mmg0djRoMnYtNGg0VjRoLTR6bS0xOCAxOHYtNGgtMnY0aC00djJoNHY0aDJ2LTRoNHYtMmgtNHptMC0xOHYtNGgtMnY0aC00djJoNHY0aDJ2LTRoNHYtMmgtNHptMzYgMTh2LTRoLTJ2NGgtNHYyaDR2NGgydi00aDR2LTJoLTR6IiBmaWxsPSIjZmZmZmZmIiBmaWxsLW9wYWNpdHk9IjAuNCIvPjwvZz48L3N2Zz4=')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Unbeatable Data Prices</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                    Check out our sample pricing for MTN SME Data. Register to see prices for all networks and enjoy even lower rates as a Reseller.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pricing Card 1 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 text-center hover:border-primary transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-yellow-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-xl mb-4">MTN</div>
+                    <h3 class="text-2xl font-bold text-white mb-1">500 MB</h3>
+                    <p class="text-slate-400 text-sm mb-6">30 Days Validity</p>
+                    <div class="text-3xl font-extrabold text-primary mb-6">₦135</div>
+                    <button class="w-full py-2 rounded-lg border border-slate-600 hover:bg-primary hover:border-primary transition-colors font-medium">Buy Now</button>
+                </div>
+                <!-- Pricing Card 2 -->
+                <div class="bg-slate-800 border border-primary relative rounded-2xl p-6 text-center transform md:-translate-y-4 shadow-2xl shadow-primary/20">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Most Popular</div>
+                    <div class="w-16 h-16 mx-auto bg-yellow-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-xl mb-4">MTN</div>
+                    <h3 class="text-2xl font-bold text-white mb-1">1.0 GB</h3>
+                    <p class="text-slate-400 text-sm mb-6">30 Days Validity</p>
+                    <div class="text-4xl font-extrabold text-white mb-6">₦260</div>
+                    <button class="w-full py-3 rounded-lg bg-primary hover:bg-blue-600 transition-colors font-bold shadow-lg">Buy Now</button>
+                </div>
+                <!-- Pricing Card 3 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 text-center hover:border-primary transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-yellow-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-xl mb-4">MTN</div>
+                    <h3 class="text-2xl font-bold text-white mb-1">2.0 GB</h3>
+                    <p class="text-slate-400 text-sm mb-6">30 Days Validity</p>
+                    <div class="text-3xl font-extrabold text-primary mb-6">₦520</div>
+                    <button class="w-full py-2 rounded-lg border border-slate-600 hover:bg-primary hover:border-primary transition-colors font-medium">Buy Now</button>
+                </div>
+                <!-- Pricing Card 4 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 text-center hover:border-primary transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-yellow-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-xl mb-4">MTN</div>
+                    <h3 class="text-2xl font-bold text-white mb-1">5.0 GB</h3>
+                    <p class="text-slate-400 text-sm mb-6">30 Days Validity</p>
+                    <div class="text-3xl font-extrabold text-primary mb-6">₦1,300</div>
+                    <button class="w-full py-2 rounded-lg border border-slate-600 hover:bg-primary hover:border-primary transition-colors font-medium">Buy Now</button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="text-white hover:text-primary underline font-medium inline-flex items-center gap-2">
+                    View full price list for all networks <i class="fas fa-arrow-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallet Funding Section -->
+    <section id="funding" class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-blue-100 flex flex-col md:flex-row">
+                <!-- Left side -->
+                <div class="bg-primary p-8 md:w-2/5 text-white flex flex-col justify-center relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold mb-4">Manual Wallet Funding</h3>
+                        <p class="text-blue-100 mb-6">Transfer funds directly to our official bank account to top up your wallet instantly. Ensure to use your registered phone number as the transfer narration or contact support after payment.</p>
+                    </div>
+                    <!-- Decorative Icon -->
+                    <i class="fas fa-university text-8xl text-blue-400/20 absolute -bottom-4 -right-4 transform -rotate-12"></i>
+                </div>
+                <!-- Right side -->
+                <div class="p-8 md:w-3/5">
+                    <h4 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-6">Official Bank Details</h4>
+                    
+                    <div class="space-y-4">
+                        <!-- Bank Name -->
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-500 mb-1">Bank Name</p>
+                                <p class="font-bold text-slate-800 text-lg">FCMB</p>
+                            </div>
+                            <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+
+                        <!-- Account Name -->
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-slate-500 mb-1">Account Name</p>
+                                <p class="font-bold text-slate-800 md:text-lg">Chinwendu Chinonyerem Emmanuel</p>
+                            </div>
+                            <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0 ml-2">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+
+                        <!-- Account Number -->
+                        <div class="bg-blue-50 p-4 rounded-xl border border-blue-200 flex justify-between items-center">
+                            <div>
+                                <p class="text-xs text-primary font-medium mb-1">Account Number</p>
+                                <p class="font-bold text-primary text-2xl tracking-wider" id="account-number">4195685010</p>
+                            </div>
+                            <button onclick="copyAccountNumber()" class="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-lg font-medium transition-colors shadow-sm flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                                <i class="fas fa-copy"></i> <span class="hidden sm:inline">Copy</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Start Your Data Reselling Business?</h2>
+            <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                Join Nonye Digital Concept today. Register for free, fund your wallet, and start selling data, airtime, and utility bills to make daily profit.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-primary font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-slate-50 transition-colors">
+                    Create Free Account
+                </button>
+                <button class="bg-blue-800 text-white border border-blue-700 font-bold px-8 py-4 rounded-xl hover:bg-blue-900 transition-colors">
+                    Contact Support
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary text-white rounded flex items-center justify-center font-bold">
+                            NDC
+                        </div>
+                        <span class="font-bold text-xl text-white">Nonye Digital Concept</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                        Your trusted partner for affordable digital services in Nigeria. We provide instant VTU, data bundles, exam pins, and electricity tokens with 24/7 automated delivery.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-twitter text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-whatsapp text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="fab fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition-colors">Pricing & Plans</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Reseller API</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Login / Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Our Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-primary transition-colors">Buy Cheap Data</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Airtime Top-Up</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Electricity Bills</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Cable TV (DSTV/GOTV)</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">WAEC/NECO Scratch Cards</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span>Port Harcourt, Rivers State, Nigeria</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span>+234 800 NONYE DG</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>support@nonyedigital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">
+                    &copy; 2026 Nonye Digital Concept. All rights reserved.
+                </p>
+                <div class="flex gap-4 text-sm text-slate-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Alert Modal (Replacing standard alert()) -->
+    <div id="custom-alert" class="fixed inset-0 bg-black/60 z-[60] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="alert-box">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-primary text-3xl mx-auto mb-4">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center text-slate-800 mb-2">Notification</h3>
+            <p id="alert-message" class="text-center text-slate-600 mb-6">Message goes here.</p>
+            <button onclick="closeAlert()" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition-colors">
+                Okay, Got it
+            </button>
+        </div>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div id="ai-chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- Chat Box -->
+        <div id="ai-chat-box" class="bg-white rounded-2xl shadow-2xl border border-slate-200 w-80 sm:w-96 mb-4 hidden flex-col overflow-hidden transition-all duration-300 origin-bottom-right transform scale-95 opacity-0">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-primary to-blue-600 p-4 flex justify-between items-center text-white">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Nonye AI Assistant</h4>
+                        <p class="text-xs text-blue-100">Powered by Gemini</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white hover:text-blue-200 focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Chat History -->
+            <div id="chat-history" class="p-4 h-80 overflow-y-auto bg-slate-50 flex flex-col gap-3">
+                <!-- Welcome Message -->
+                <div class="flex gap-2">
+                    <div class="w-8 h-8 rounded-full bg-primary text-white flex shrink-0 items-center justify-center text-xs">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 text-sm text-slate-700 max-w-[80%]">
+                        Hello! I'm the Nonye AI Assistant. Ask me about our data plans, exam pins, or how to pay your electricity bill!
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loading Indicator -->
+            <div id="chat-loading" class="hidden p-3 bg-slate-50">
+                <div class="flex gap-2 items-center text-slate-500 text-sm">
+                    <i class="fas fa-circle-notch fa-spin text-primary"></i> AI is typing...
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <form id="chat-form" onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-slate-100 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Ask a question..." class="flex-1 bg-slate-100 border-transparent rounded-full px-4 py-2 text-sm focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none" required autocomplete="off">
+                <button type="submit" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                    <i class="fas fa-paper-plane text-sm"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Floating Action Button -->
+        <button id="chat-fab" onclick="toggleChat()" class="w-14 h-14 bg-gradient-to-r from-primary to-blue-600 rounded-full shadow-xl shadow-blue-500/30 flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform focus:outline-none group">
+            <i class="fas fa-comment-dots group-hover:hidden"></i>
+            <i class="fas fa-robot hidden group-hover:block"></i>
+        </button>
+    </div>
+
+    <script>
+        // Tab Switching Logic
+        function openTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Reset all tab buttons styling
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-white', 'shadow-sm', 'border', 'border-primary/20', 'text-primary', 'font-bold');
+                btn.classList.add('text-slate-600', 'font-medium');
+                
+                // Reset icons
+                const iconContainer = btn.querySelector('div:first-child');
+                iconContainer.classList.remove('bg-blue-100', 'text-primary');
+                iconContainer.classList.add('bg-slate-200', 'text-slate-500');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Style active button
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('text-slate-600', 'font-medium');
+                activeBtn.classList.add('bg-white', 'shadow-sm', 'border', 'border-primary/20', 'text-primary', 'font-bold');
+                
+                // Style active icon
+                const activeIconContainer = activeBtn.querySelector('div:first-child');
+                activeIconContainer.classList.remove('bg-slate-200', 'text-slate-500');
+                activeIconContainer.classList.add('bg-blue-100', 'text-primary');
+            }
+        }
+
+        // Custom Alert Logic
+        function showAlert(message) {
+            const alertModal = document.getElementById('custom-alert');
+            const alertBox = document.getElementById('alert-box');
+            document.getElementById('alert-message').textContent = message;
+            
+            alertModal.classList.remove('hidden');
+            alertModal.classList.add('flex');
+            
+            // Trigger animation
+            setTimeout(() => {
+                alertBox.classList.remove('scale-95', 'opacity-0');
+                alertBox.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeAlert() {
+            const alertModal = document.getElementById('custom-alert');
+            const alertBox = document.getElementById('alert-box');
+            
+            alertBox.classList.remove('scale-100', 'opacity-100');
+            alertBox.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                alertModal.classList.remove('flex');
+                alertModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Copy Account Number Logic
+        function copyAccountNumber() {
+            const accNum = document.getElementById('account-number').innerText;
+            // Using older execCommand for maximum iframe compatibility 
+            const tempInput = document.createElement("input");
+            tempInput.value = accNum;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Show custom alert message
+            showAlert("Account number " + accNum + " copied to clipboard successfully!");
+        }
+
+        // Form Handling
+        function handleFormSubmit(event, actionName) {
+            event.preventDefault();
+            // In a real app, this would make an API call
+            showAlert(`Please log in or register to complete this ${actionName}. This is a preview frontend environment.`);
+        }
+
+        // Simulate Meter Verification
+        function verifyMeter() {
+            const meterNameElem = document.getElementById('meter-name');
+            meterNameElem.classList.remove('hidden');
+            meterNameElem.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
+            meterNameElem.classList.remove('text-green-600');
+            meterNameElem.classList.add('text-slate-500');
+            
+            setTimeout(() => {
+                meterNameElem.innerHTML = '<i class="fas fa-check-circle"></i> Customer verified: NONYE DIGITAL TEST';
+                meterNameElem.classList.remove('text-slate-500');
+                meterNameElem.classList.add('text-green-600');
+            }, 1500);
+        }
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                mobileMenu.classList.remove('open');
+                menuOverlay.classList.add('hidden');
+            } else {
+                mobileMenu.classList.add('open');
+                menuOverlay.classList.remove('hidden');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // AI Chat Assistant Logic
+        const chatBox = document.getElementById('ai-chat-box');
+        const chatHistory = document.getElementById('chat-history');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatLoading = document.getElementById('chat-loading');
+        
+        // System instruction to guide the Gemini model's persona
+        const systemPrompt = `You are a helpful, friendly customer support assistant for "Nonye Digital Concept", a Virtual Top-Up (VTU) platform in Nigeria. 
+        Your job is to assist users with questions about buying cheap data, airtime, WAEC/NECO exam scratch cards, and paying electricity bills (prepaid/postpaid).
+        Keep your answers concise, clear, and in a single short paragraph or a few bullet points. 
+        If asked about prices, you can give estimates (e.g., MTN 1GB is usually around ₦260).
+        Always encourage them to register or login to use the services. Be polite and use Nigerian colloquialisms slightly if appropriate (e.g., 'Welcome o!').`;
+
+        // Store chat history for context
+        let aiChatHistory = [];
+
+        function toggleChat() {
+            const isHidden = chatBox.classList.contains('hidden');
+            if (isHidden) {
+                chatBox.classList.remove('hidden');
+                // Trigger animation
+                setTimeout(() => {
+                    chatBox.classList.remove('scale-95', 'opacity-0');
+                    chatBox.classList.add('scale-100', 'opacity-100');
+                    chatInput.focus();
+                }, 10);
+            } else {
+                chatBox.classList.remove('scale-100', 'opacity-100');
+                chatBox.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    chatBox.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        function appendMessage(text, isUser) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex gap-2 ${isUser ? 'flex-row-reverse' : ''}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `w-8 h-8 rounded-full flex shrink-0 items-center justify-center text-xs text-white ${isUser ? 'bg-slate-800' : 'bg-primary'}`;
+            avatar.innerHTML = isUser ? '<i class="fas fa-user"></i>' : '<i class="fas fa-robot"></i>';
+
+            const bubble = document.createElement('div');
+            bubble.className = `p-3 rounded-2xl shadow-sm border border-slate-100 text-sm max-w-[80%] ${
+                isUser 
+                ? 'bg-slate-800 text-white rounded-tr-none' 
+                : 'bg-white text-slate-700 rounded-tl-none'
+            }`;
+            // Basic markdown rendering for bold text
+            bubble.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            msgDiv.appendChild(avatar);
+            msgDiv.appendChild(bubble);
+            chatHistory.appendChild(msgDiv);
+            
+            // Scroll to bottom
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+        }
+
+        async function handleChatSubmit(event) {
+            event.preventDefault();
+            const userText = chatInput.value.trim();
+            if (!userText) return;
+
+            // 1. Display user message
+            appendMessage(userText, true);
+            chatInput.value = '';
+            
+            // 2. Add to history
+            aiChatHistory.push({ role: "user", parts: [{ text: userText }] });
+
+            // 3. Show loading
+            chatLoading.classList.remove('hidden');
+            chatForm.querySelector('button').disabled = true;
+
+            try {
+                // 4. Call Gemini API
+                const apiKey = ""; // Canvas handles this automatically
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: aiChatHistory,
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    }
+                };
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                
+                if (result.candidates && result.candidates[0] && result.candidates[0].content) {
+                    const aiResponseText = result.candidates[0].content.parts[0].text;
+                    
+                    // 5. Display AI response
+                    appendMessage(aiResponseText, false);
+                    
+                    // 6. Update history with model response
+                    aiChatHistory.push({ role: "model", parts: [{ text: aiResponseText }] });
+                } else {
+                    throw new Error("Invalid response structure from Gemini API");
+                }
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                appendMessage("Sorry, I am having trouble connecting to my servers right now. Please try again later or contact our human support.", false);
+            } finally {
+                // 7. Hide loading
+                chatLoading.classList.add('hidden');
+                chatForm.querySelector('button').disabled = false;
+                chatInput.focus();
+            }
+        }
+    </script>
+</body>
+</html>
